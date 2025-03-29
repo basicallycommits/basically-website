@@ -1,6 +1,6 @@
-# My Personal Website 🌐
+# My Personal Website
 
-This is my personal portfolio website, built with modern web technologies to showcase my work and skills.
+This is my personal website, built with modern web technologies to showcase my work and skills.
 
 ## Tech Stack
 
