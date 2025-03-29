@@ -2,12 +2,12 @@
 
 This is my personal portfolio website, built with modern web technologies to showcase my work and skills.
 
-## 🚀 Tech Stack
+## Tech Stack
 
 - **Frontend:** React, React Router, Tailwind CSS, ShadCN
 - **Build Tool:** Vite
 
-## 📂 Setup Instructions
+## Setup Instructions
 
 1. Clone the repository:
    ````sh
@@ -22,9 +22,3 @@ This is my personal portfolio website, built with modern web technologies to sho
    ```sh
    npm run dev
    ```
-
-## 🔮 Future Plans
-
-- Add a blog section
-- Improve animations and UI
-- Optimize for performance
