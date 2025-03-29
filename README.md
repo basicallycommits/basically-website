@@ -10,13 +10,13 @@ This is my personal website, built with modern web technologies to showcase my w
 ## Setup Instructions
 
 1. Clone the repository:
-   ````sh
+   ```sh
    git clone https://github.com/yourusername/my-website.git
-   cd my-website```
-   ````
+   cd my-website
+   ```
 2. Install dependencies:
    ```sh
-    npm install
+   npm install
    ```
 3. Start the development server:
    ```sh
