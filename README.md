@@ -4,7 +4,7 @@ This is my personal website, built with modern web technologies to showcase my w
 
 ## Tech Stack
 
-- **Frontend:** React, React Router, Tailwind CSS, ShadCN
+- **Frontend:** React, Tailwind CSS
 - **Build Tool:** Vite
 
 ## Setup Instructions
