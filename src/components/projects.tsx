@@ -123,17 +123,6 @@ const Projects = () => {
                 className="block transform transition hover:scale-[1.02] hover:shadow-xl hover:bg-gray-50 dark:hover:bg-gray-800 rounded-2xl"
               >
                 <div className="relative flex flex-col md:flex-row items-center bg-white dark:bg-gray-900 rounded-2xl shadow-md overflow-hidden">
-                  {/* Status badge */}
-                  <div
-                    className={`absolute top-4 right-4 px-3 py-1 text-sm font-medium rounded-full ${
-                      statusColorMap[
-                        project.status as keyof typeof statusColorMap
-                      ]
-                    }`}
-                  >
-                    {project.status.replace("-", " ")} • {project.date}
-                  </div>
-
                   {/* Image */}
                   <img
                     src={project.imageUrl}
@@ -142,25 +131,40 @@ const Projects = () => {
                   />
 
                   {/* Text */}
-                  <div className="p-6 md:w-2/3">
-                    <h3 className="text-2xl font-semibold text-gray-800 dark:text-white">
-                      {project.title}
-                    </h3>
+                  <div className="p-6 md:w-2/3 w-full flex flex-col gap-2">
+                    {/* Title + Status Row */}
+                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
+                      <h3 className="text-2xl font-semibold text-gray-800 dark:text-white">
+                        {project.title}
+                      </h3>
+                      <div
+                        className={`text-sm font-medium rounded-full px-3 py-1 w-fit mt-1 sm:mt-0 ${
+                          statusColorMap[
+                            project.status as keyof typeof statusColorMap
+                          ]
+                        }`}
+                      >
+                        {project.status.replace("-", " ")} • {project.date}
+                      </div>
+                    </div>
+
+                    {/* Description */}
                     {project.descriptionHtml ? (
                       <p
-                        className="mt-2 text-gray-600 dark:text-gray-300"
+                        className="text-gray-600 dark:text-gray-300"
                         dangerouslySetInnerHTML={{
                           __html: project.descriptionHtml,
                         }}
                       />
                     ) : (
-                      <p className="mt-2 text-gray-600 dark:text-gray-300">
+                      <p className="text-gray-600 dark:text-gray-300">
                         {project.description}
                       </p>
                     )}
+
                     {/* Tech Stack Tags */}
                     {project.skillsUsed && (
-                      <div className="mt-4 flex flex-wrap gap-2">
+                      <div className="mt-2 flex flex-wrap gap-2">
                         {project.skillsUsed.map((tech, i) => (
                           <span
                             key={i}
