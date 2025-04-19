@@ -30,30 +30,22 @@ const Navbar = () => {
 
         {/* Desktop Links */}
         <div className="hidden md:flex space-x-6 items-center">
-          <a
-            href="#about"
-            className="text-gray-600 dark:text-gray-300 hover:text-sky-500 dark:hover:text-sky-400 transition"
-          >
-            About
-          </a>
-          <a
-            href="#projects"
-            className="text-gray-600 dark:text-gray-300 hover:text-sky-500 dark:hover:text-sky-400 transition"
-          >
-            Projects
-          </a>
-          <a
-            href="#skills"
-            className="text-gray-600 dark:text-gray-300 hover:text-sky-500 dark:hover:text-sky-400 transition"
-          >
-            Skills
-          </a>
-          <a
-            href="#contact"
-            className="text-gray-600 dark:text-gray-300 hover:text-sky-500 dark:hover:text-sky-400 transition"
-          >
-            Contact
-          </a>
+          {[
+            { href: "#about", label: "About" },
+            { href: "#projects", label: "Projects" },
+            { href: "#skills", label: "Skills" },
+            { href: "#contact", label: "Contact" },
+          ].map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="relative text-gray-600 dark:text-gray-300 group transition"
+            >
+              {link.label}
+              <span className="absolute left-0 -bottom-0.5 h-[2px] w-0 bg-sky-500 transition-all duration-300 group-hover:w-full" />
+            </a>
+          ))}
+
           <button
             onClick={toggleTheme}
             className="ml-4 text-gray-600 dark:text-gray-300 hover:text-sky-500 dark:hover:text-sky-400 transition"
