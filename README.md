@@ -22,3 +22,7 @@ This is my personal website, built with modern web technologies to showcase my w
    ```sh
    npm run dev
    ```
+
+## Image Attributions
+
+<a href="https://www.flaticon.com/free-icons/electricity" title="electricity icons">Electricity icons created by fjstudio - Flaticon</a>
