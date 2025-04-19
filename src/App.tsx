@@ -14,8 +14,8 @@ function App() {
         <About />
         <Projects />
         <FindMe />
-        <Contact />
       </main>
+      <Contact />
     </>
   );
 }
