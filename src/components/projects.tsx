@@ -43,8 +43,8 @@ const Projects = () => {
     },
     {
       title: "AUSA Wellbeing Tracker",
-      description:
-        "Team project to help students log and track their wellbeing. Built with Next.js and Express.",
+      descriptionHtml:
+        'Team project with @WDCC. A hub that enables University of Auckland students to seamlessly access the university\'s health and counselling services. Built by students, for students. Find out more <a href="https://wdcc.co.nz/projects/2025/ausa" target="_blank" rel="noopener noreferrer" class="underline text-blue-500 dark:text-blue-300 hover:text-blue-700 dark:hover:text-blue-100">here</a>.',
       imageUrl: wdccImg,
       repoUrl: "https://github.com/UoaWDCC/ausa",
       date: "Mar 2025 – Present",
@@ -127,9 +127,18 @@ const Projects = () => {
                     <h3 className="text-2xl font-semibold text-gray-800 dark:text-white">
                       {project.title}
                     </h3>
-                    <p className="mt-2 text-gray-600 dark:text-gray-300">
-                      {project.description}
-                    </p>
+                    {project.descriptionHtml ? (
+                      <p
+                        className="mt-2 text-gray-600 dark:text-gray-300"
+                        dangerouslySetInnerHTML={{
+                          __html: project.descriptionHtml,
+                        }}
+                      />
+                    ) : (
+                      <p className="mt-2 text-gray-600 dark:text-gray-300">
+                        {project.description}
+                      </p>
+                    )}
                   </div>
                 </div>
               </Wrapper>
