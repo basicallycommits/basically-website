@@ -136,14 +136,22 @@ const Projects = () => {
                       <h3 className="text-2xl font-semibold text-gray-800 dark:text-white">
                         {project.title}
                       </h3>
-                      <div
-                        className={`text-sm font-medium rounded-full px-3 py-1 w-fit mt-1 sm:mt-0 ${
-                          statusColorMap[
-                            project.status as keyof typeof statusColorMap
-                          ]
-                        }`}
-                      >
-                        {project.status.replace("-", " ")} • {project.date}
+                      <div className="flex flex-wrap gap-2 mt-1 sm:mt-0">
+                        {/* Status Badge */}
+                        <span
+                          className={`text-sm font-medium rounded-full px-3 py-1 ${
+                            statusColorMap[
+                              project.status as keyof typeof statusColorMap
+                            ]
+                          }`}
+                        >
+                          {project.status.replace("-", " ")}
+                        </span>
+
+                        {/* Date Badge */}
+                        <span className="text-sm font-medium rounded-full px-3 py-1 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200">
+                          {project.date}
+                        </span>
                       </div>
                     </div>
 
