@@ -20,6 +20,7 @@ const Projects = () => {
         "Quartus",
         "QuestaSim",
       ],
+      placeholderImage: true,
     },
     {
       title: "VHDL Flappy Bird",
@@ -30,6 +31,7 @@ const Projects = () => {
       date: "Apr 2025 – Present",
       status: "in-progress",
       skillsUsed: ["VHDL", "FPGA", "VGA", "Proteus", "LTSpice"],
+      placeholderImage: true,
     },
     {
       title: "Portfolio Website",
@@ -56,6 +58,7 @@ const Projects = () => {
         "Assembling",
         "Troubleshooting",
       ],
+      placeholderImage: true,
     },
     {
       title: "AUSA Wellbeing Tracker",
@@ -160,6 +163,13 @@ const Projects = () => {
                       <p className="text-gray-600 dark:text-gray-300">
                         {project.description}
                       </p>
+                    )}
+
+                    {/* Placeholder image badge */}
+                    {project.placeholderImage && (
+                      <span className="text-xs mt-1 text-gray-400 italic">
+                        * Image is a placeholder from Unsplash
+                      </span>
                     )}
 
                     {/* Tech Stack Tags */}
