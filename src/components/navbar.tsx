@@ -91,10 +91,10 @@ const Navbar = () => {
             Projects
           </a>
           <a
-            href="#skills"
+            href="#find-me"
             className="block py-2 text-gray-600 dark:text-gray-300 hover:text-sky-500 dark:hover:text-sky-400 transition"
           >
-            Skills
+            Find Me
           </a>
           <a
             href="#contact"
