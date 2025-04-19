@@ -22,8 +22,8 @@ This is my personal website — a portfolio built with modern web tech to showca
 
 1. Clone the repository:
    ```sh
-   git clone [https://github.com/yourusername/my-website.git](https://github.com/basicallycommits/basically-website.git)
-   cd my-website
+   git clone https://github.com/basicallycommits/basically-website.git
+   cd basically-website
    ```
 2. Install dependencies:
    ```sh
