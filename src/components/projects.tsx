@@ -127,11 +127,13 @@ const Projects = () => {
               >
                 <div className="relative flex flex-col md:flex-row items-center bg-white dark:bg-gray-900 rounded-2xl shadow-md overflow-hidden">
                   {/* Image */}
-                  <img
-                    src={project.imageUrl}
-                    alt={project.title}
-                    className="w-full md:w-1/3 h-48 object-cover"
-                  />
+                  <div className="flex justify-center items-center p-4 w-full md:w-1/3">
+                    <img
+                      src={project.imageUrl}
+                      alt={project.title}
+                      className="h-48 w-full object-cover rounded-2xl"
+                    />
+                  </div>
 
                   {/* Text */}
                   <div className="p-6 md:w-2/3 w-full flex flex-col gap-2">
