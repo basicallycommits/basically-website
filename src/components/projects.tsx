@@ -132,12 +132,11 @@ const Projects = () => {
                   {/* Text */}
                   <div className="p-6 md:w-2/3 w-full flex flex-col gap-2">
                     {/* Title + Status Row */}
-                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
-                      <h3 className="text-2xl font-semibold text-gray-800 dark:text-white">
+                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1">
+                      <h3 className="text-2xl font-semibold text-gray-800 dark:text-white sm:truncate sm:whitespace-normal sm:flex-1">
                         {project.title}
                       </h3>
-                      <div className="flex flex-wrap gap-2 mt-1 sm:mt-0 justify-end w-full">
-                        {/* Status Badge */}
+                      <div className="flex flex-wrap gap-2 mt-1 sm:mt-0 sm:shrink-0 sm:justify-end sm:max-w-[50%]">
                         <span
                           className={`text-sm font-medium rounded-full px-3 py-1 ${
                             statusColorMap[
@@ -147,8 +146,6 @@ const Projects = () => {
                         >
                           {project.status.replace("-", " ")}
                         </span>
-
-                        {/* Date Badge */}
                         <span className="text-sm font-medium rounded-full px-3 py-1 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200">
                           {project.date}
                         </span>
