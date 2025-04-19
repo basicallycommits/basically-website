@@ -16,7 +16,6 @@ const Projects = () => {
       skillsUsed: [
         "Altium Designer",
         "Microchip Studio",
-        "VGA",
         "Quartus",
         "QuestaSim",
       ],
@@ -30,7 +29,7 @@ const Projects = () => {
         "https://images.unsplash.com/photo-1597862624292-45748390b00e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       date: "Apr 2025 – Present",
       status: "in-progress",
-      skillsUsed: ["VHDL", "FPGA", "VGA", "Proteus", "LTSpice"],
+      skillsUsed: ["VHDL", "FPGA", "Proteus", "LTSpice"],
       placeholderImage: true,
     },
     {
