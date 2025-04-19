@@ -28,7 +28,7 @@ const socials = [
   },
   {
     title: "Email",
-    url: "#contact",
+    url: "#contact", // This will scroll to the section with id="contact"
     icon: <SiMinutemailer className="w-6 h-6" />,
     description: "Reach out via email.",
   },
@@ -53,10 +53,12 @@ const FindMe = () => {
       </h2>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
         {socials.map((site, i) => (
-          <div
+          // Wrap the entire block in an <a> tag if the URL exists
+          <a
             key={i}
+            href={site.url || "#"} // Fall back to "#" if no URL is provided
+            target={site.url ? "_blank" : undefined} // Only set target="_blank" if a URL exists
             className="flex items-center p-6 bg-white dark:bg-gray-900 rounded-2xl shadow-md hover:shadow-lg transition hover:scale-[1.02]"
-            {...(site.url ? { as: "a", href: site.url, target: "_blank" } : {})}
           >
             <div className="mr-4 text-sky-500 dark:text-sky-400">
               {site.icon}
@@ -71,7 +73,7 @@ const FindMe = () => {
                 </p>
               )}
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </section>
