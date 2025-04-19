@@ -7,12 +7,19 @@ const Projects = () => {
   const projectList = [
     {
       title: "Smart Energy Monitor",
-      description:
-        "A system designed on a PCB to track energy usage and provide insights.",
+      descriptionHtml:
+        'A system designed on a PCB to track energy usage and provide insights. Find more information <a href="https://courseoutline.auckland.ac.nz/dco/course/COMPSYS/209" target="_blank" rel="noopener noreferrer" class="underline text-blue-500 dark:text-blue-300 hover:text-blue-700 dark:hover:text-blue-100">on the university\'s website,</a> or on <a href="https://uoa-ece209.github.io/" target="_blank" rel="noopener noreferrer" class="underline text-blue-500 dark:text-blue-300 hover:text-blue-700 dark:hover:text-blue-100">this page</a>.',
       imageUrl:
         "https://images.unsplash.com/photo-1724770388447-30b015a5cbb6?q=80&w=1939&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       date: "Expected Start: Jul 2025",
       status: "coming-soon",
+      skillsUsed: [
+        "Altium Designer",
+        "Microchip Studio",
+        "VGA",
+        "Quartus",
+        "QuestaSim",
+      ],
     },
     {
       title: "VHDL Flappy Bird",
@@ -22,6 +29,7 @@ const Projects = () => {
         "https://images.unsplash.com/photo-1597862624292-45748390b00e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       date: "Apr 2025 – Present",
       status: "in-progress",
+      skillsUsed: ["VHDL", "FPGA", "VGA", "Proteus", "LTSpice"],
     },
     {
       title: "Portfolio Website",
@@ -31,6 +39,7 @@ const Projects = () => {
       repoUrl: "https://github.com/basicallycommits/basically-website",
       date: "Apr 2025 – Present",
       status: "published",
+      skillsUsed: ["React", "Vite", "TailwindCSS"],
     },
     {
       title: "Brushless DC Motor",
@@ -40,6 +49,13 @@ const Projects = () => {
         "https://images.unsplash.com/photo-1723730741656-6333f4840ecf?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       date: "Mar 2025 – Present",
       status: "in-progress",
+      skillsUsed: [
+        "Soldering",
+        "3d-Printing",
+        "Laser-Cutting",
+        "Assembling",
+        "Troubleshooting",
+      ],
     },
     {
       title: "AUSA Wellbeing Tracker",
@@ -49,15 +65,17 @@ const Projects = () => {
       repoUrl: "https://github.com/UoaWDCC/ausa",
       date: "Mar 2025 – Present",
       status: "in-progress",
+      skillsUsed: ["Next.js", "React", "TailwindCSS", "Express.js", "Firebase"],
     },
     {
       title: "Freecycling Website",
       description:
-        "High-fidelity prototype of an aesthically pleasing, responsive website designed to promote recycling.",
+        "High-fidelity prototype of an aesthically pleasing, responsive website designed to promote recycling. Built in vanilla HTML, CSS and JavaScript.",
       imageUrl: freecyclingImg,
       repoUrl: "https://github.com/basicallycommits/freecycling-website-hfp",
       date: "May 2024 – Jun 2024",
       status: "published",
+      skillsUsed: ["HTML", "CSS", "JavaScript"],
     },
     {
       title: "AI Escape Room Game",
@@ -67,6 +85,7 @@ const Projects = () => {
       repoUrl: "https://github.com/basicallycommits/escaipe-room-game",
       date: "Jul 2023 – Nov 2023",
       status: "published",
+      skillsUsed: ["Java", "JavaFX", "CSS", "OpenAI API"],
     },
   ];
 
@@ -104,17 +123,6 @@ const Projects = () => {
                 className="block transform transition hover:scale-[1.02] hover:shadow-xl hover:bg-gray-50 dark:hover:bg-gray-800 rounded-2xl"
               >
                 <div className="relative flex flex-col md:flex-row items-center bg-white dark:bg-gray-900 rounded-2xl shadow-md overflow-hidden">
-                  {/* Status badge */}
-                  <div
-                    className={`absolute top-4 right-4 px-3 py-1 text-sm font-medium rounded-full ${
-                      statusColorMap[
-                        project.status as keyof typeof statusColorMap
-                      ]
-                    }`}
-                  >
-                    {project.status.replace("-", " ")} • {project.date}
-                  </div>
-
                   {/* Image */}
                   <img
                     src={project.imageUrl}
@@ -123,21 +131,49 @@ const Projects = () => {
                   />
 
                   {/* Text */}
-                  <div className="p-6 md:w-2/3">
-                    <h3 className="text-2xl font-semibold text-gray-800 dark:text-white">
-                      {project.title}
-                    </h3>
+                  <div className="p-6 md:w-2/3 w-full flex flex-col gap-2">
+                    {/* Title + Status Row */}
+                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
+                      <h3 className="text-2xl font-semibold text-gray-800 dark:text-white">
+                        {project.title}
+                      </h3>
+                      <div
+                        className={`text-sm font-medium rounded-full px-3 py-1 w-fit mt-1 sm:mt-0 ${
+                          statusColorMap[
+                            project.status as keyof typeof statusColorMap
+                          ]
+                        }`}
+                      >
+                        {project.status.replace("-", " ")} • {project.date}
+                      </div>
+                    </div>
+
+                    {/* Description */}
                     {project.descriptionHtml ? (
                       <p
-                        className="mt-2 text-gray-600 dark:text-gray-300"
+                        className="text-gray-600 dark:text-gray-300"
                         dangerouslySetInnerHTML={{
                           __html: project.descriptionHtml,
                         }}
                       />
                     ) : (
-                      <p className="mt-2 text-gray-600 dark:text-gray-300">
+                      <p className="text-gray-600 dark:text-gray-300">
                         {project.description}
                       </p>
+                    )}
+
+                    {/* Tech Stack Tags */}
+                    {project.skillsUsed && (
+                      <div className="mt-2 flex flex-wrap gap-2">
+                        {project.skillsUsed.map((tech, i) => (
+                          <span
+                            key={i}
+                            className="text-xs font-medium px-2 py-1 rounded-full bg-sky-100 text-sky-800 dark:bg-sky-800 dark:text-sky-100"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
                     )}
                   </div>
                 </div>
