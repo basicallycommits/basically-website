@@ -22,7 +22,7 @@ const socials = [
   },
   {
     title: "Discord",
-    url: null,
+    url: "https://discord.com/",
     icon: <SiDiscord className="w-6 h-6" />,
     description: "placeholder-username",
   },
@@ -53,11 +53,13 @@ const FindMe = () => {
       </h2>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
         {socials.map((site, i) => (
-          // Wrap the entire block in an <a> tag if the URL exists
+          // Check if the link is internal (fragment identifier) or external
           <a
             key={i}
             href={site.url || "#"} // Fall back to "#" if no URL is provided
-            target={site.url ? "_blank" : undefined} // Only set target="_blank" if a URL exists
+            target={
+              site.url && site.url.startsWith("http") ? "_blank" : undefined
+            } // Only set target="_blank" for external links
             className="flex items-center p-6 bg-white dark:bg-gray-900 rounded-2xl shadow-md hover:shadow-lg transition hover:scale-[1.02]"
           >
             <div className="mr-4 text-sky-500 dark:text-sky-400">
