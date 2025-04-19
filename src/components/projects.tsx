@@ -1,10 +1,142 @@
+import vscodeImg from "@/assets/vscode_ss.png";
+import wdccImg from "@/assets/wdcc_ss.png";
+import freecyclingImg from "@/assets/freecycling_ss.png";
+import escapeRoomImg from "@/assets/escape_room.png";
+
 const Projects = () => {
+  const projectList = [
+    {
+      title: "Smart Energy Monitor",
+      description:
+        "A system designed on a PCB to track energy usage and provide insights.",
+      imageUrl:
+        "https://images.unsplash.com/photo-1724770388447-30b015a5cbb6?q=80&w=1939&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      date: "Expected Start: Jul 2025",
+      status: "coming-soon",
+    },
+    {
+      title: "VHDL Flappy Bird",
+      description:
+        "Classic Flappy Bird-inspired game implemented in VHDL on an FPGA. Displayed on a VGA screen. Built with Quartus and QuestaSim.",
+      imageUrl:
+        "https://images.unsplash.com/photo-1597862624292-45748390b00e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      date: "Apr 2025 – Present",
+      status: "in-progress",
+    },
+    {
+      title: "Portfolio Website",
+      description:
+        "This is it, right here! A clean personal site to showcase my projects and experience. Built with Vite, React, and TailwindCSS.",
+      imageUrl: vscodeImg,
+      repoUrl: "https://github.com/basicallycommits/basically-website",
+      date: "Apr 2025 – Present",
+      status: "published",
+    },
+    {
+      title: "Brushless DC Motor",
+      description:
+        "Soldered, 3d-printed, laser-cut and assembled parts for a brushless DC motor.",
+      imageUrl:
+        "https://images.unsplash.com/photo-1723730741656-6333f4840ecf?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      date: "Mar 2025 – Present",
+      status: "in-progress",
+    },
+    {
+      title: "AUSA Wellbeing Tracker",
+      description:
+        "Team project to help students log and track their wellbeing. Built with Next.js and Express.",
+      imageUrl: wdccImg,
+      repoUrl: "https://github.com/UoaWDCC/ausa",
+      date: "Mar 2025 – Present",
+      status: "in-progress",
+    },
+    {
+      title: "Freecycling Website",
+      description:
+        "High-fidelity prototype of an aesthically pleasing, responsive website designed to promote recycling.",
+      imageUrl: freecyclingImg,
+      repoUrl: "https://github.com/basicallycommits/freecycling-website-hfp",
+      date: "May 2024 – Jun 2024",
+      status: "published",
+    },
+    {
+      title: "AI Escape Room Game",
+      description:
+        "Text-based puzzle game with AI-powered game master. Built with OpenAI API and JavaFX.",
+      imageUrl: escapeRoomImg,
+      repoUrl: "https://github.com/basicallycommits/escaipe-room-game",
+      date: "Jul 2023 – Nov 2023",
+      status: "published",
+    },
+  ];
+
+  const statusColorMap = {
+    published:
+      "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200",
+    "in-progress":
+      "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200",
+    "coming-soon":
+      "bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200",
+  };
+
   return (
-    <section id="projects" className="text-center">
-      <h2 className="text-3xl font-semibold text-sky-500">Projects</h2>
-      <p className="mt-4 text-gray-600 dark:text-gray-300">
-        This is a placeholder for the Projects section.
-      </p>
+    <section id="projects">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <h2 className="text-3xl font-bold text-sky-500 text-center">
+          Projects
+        </h2>
+
+        <div className="space-y-12">
+          {projectList.map((project, index) => {
+            const Wrapper = project.repoUrl ? "a" : "div";
+            const wrapperProps = project.repoUrl
+              ? {
+                  href: project.repoUrl,
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                }
+              : {};
+
+            return (
+              <Wrapper
+                key={index}
+                {...wrapperProps}
+                className="block transform transition hover:scale-[1.02] hover:shadow-xl hover:bg-gray-50 dark:hover:bg-gray-800 rounded-2xl"
+              >
+                <div className="relative flex flex-col md:flex-row items-center bg-white dark:bg-gray-900 rounded-2xl shadow-md overflow-hidden">
+                  {/* Status badge */}
+                  <div
+                    className={`absolute top-4 right-4 px-3 py-1 text-sm font-medium rounded-full ${
+                      statusColorMap[
+                        project.status as keyof typeof statusColorMap
+                      ]
+                    }`}
+                  >
+                    {project.status.replace("-", " ")} • {project.date}
+                  </div>
+
+                  {/* Image */}
+                  <img
+                    src={project.imageUrl}
+                    alt={project.title}
+                    className="w-full md:w-1/3 h-48 object-cover"
+                  />
+
+                  {/* Text */}
+                  <div className="p-6 md:w-2/3">
+                    <h3 className="text-2xl font-semibold text-gray-800 dark:text-white">
+                      {project.title}
+                    </h3>
+                    <p className="mt-2 text-gray-600 dark:text-gray-300">
+                      {project.description}
+                    </p>
+                  </div>
+                </div>
+              </Wrapper>
+            );
+          })}
+        </div>
+      </div>
     </section>
   );
 };
