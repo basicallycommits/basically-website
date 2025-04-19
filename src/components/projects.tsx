@@ -136,7 +136,7 @@ const Projects = () => {
                       <h3 className="text-2xl font-semibold text-gray-800 dark:text-white">
                         {project.title}
                       </h3>
-                      <div className="flex flex-wrap gap-2 mt-1 sm:mt-0">
+                      <div className="flex flex-wrap gap-2 mt-1 sm:mt-0 justify-end w-full">
                         {/* Status Badge */}
                         <span
                           className={`text-sm font-medium rounded-full px-3 py-1 ${
