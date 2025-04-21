@@ -117,7 +117,7 @@ const Projects = () => {
                 {...wrapperProps}
                 className="block transform transition hover:scale-[1.02] hover:shadow-xl hover:bg-gray-50 dark:hover:bg-gray-800 rounded-2xl"
               >
-                <div className="relative flex flex-col md:flex-row items-center bg-white dark:bg-gray-900 rounded-2xl shadow-md overflow-hidden">
+                <div className="relative flex flex-col md:flex-row items-center bg-[var(--colour-accent)] dark:bg-[var(--colour-accent-dark)] rounded-2xl shadow-md overflow-hidden">
                   {/* Image */}
                   <div className="flex justify-center items-center p-4 w-full md:w-1/3">
                     <img

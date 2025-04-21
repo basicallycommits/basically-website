@@ -18,7 +18,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="w-full bg-white dark:bg-gray-900 shadow-md fixed top-0 left-0 z-50 transition-colors">
+    <nav className="w-full bg-[var(--colour-accent)] dark:bg-[var(--colour-accent-dark)] shadow-md fixed top-0 left-0 z-50 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         {/* Logo */}
         <a

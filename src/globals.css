@@ -11,12 +11,14 @@ html {
 :root {
   --text-light: #374151;
   --colour-primary: #0ea5e9; /* sky 500 */
+  --colour-accent: #ffffff; /* white - currently unused */
   --text-dark: #374151; /* fallback (used if dark mode not triggered) */
 }
 
 .dark {
   --text-dark: #d1d5db;
   --colour-primary-dark: #38bdf8; /* sky 400 */
+  --colour-accent-dark: #111827; /* gray 900 */
 }
 
 body {

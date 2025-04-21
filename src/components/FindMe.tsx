@@ -58,7 +58,7 @@ const FindMe = () => {
             target={
               site.url && site.url.startsWith("http") ? "_blank" : undefined
             } // Only set target="_blank" for external links
-            className="flex items-center p-6 bg-white dark:bg-gray-900 rounded-2xl shadow-md hover:shadow-lg transition hover:scale-[1.02]"
+            className="flex items-center p-6 bg-[var(--colour-accent)] dark:bg-[var(--colour-accent-dark)] rounded-2xl shadow-md hover:shadow-lg transition hover:scale-[1.02]"
           >
             <div className="mr-4 text-sky-500 dark:text-sky-400">
               {site.icon}

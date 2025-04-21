@@ -18,7 +18,7 @@ function AccordionItem({
     <AccordionPrimitive.Item
       data-slot="accordion-item"
       className={cn(
-        "text-gray-700 dark:text-gray-300 border-b border-gray-300 last:border-b-0",
+        "text-gray-700 dark:text-gray-300 border-b border-gray-300 dark:border-zinc-800 last:border-b-0",
         className
       )}
       {...props}

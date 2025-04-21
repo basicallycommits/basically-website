@@ -2,7 +2,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900"
+      className="py-16 px-4 sm:px-6 lg:px-8 bg-[var(--colour-accent)] dark:bg-[var(--colour-accent-dark)]"
     >
       <div className="max-w-xl mx-auto text-center">
         <h2>Contact</h2>
@@ -21,18 +21,18 @@ const Contact = () => {
             name="email"
             placeholder="Your email"
             required
-            className="w-full p-3 rounded-md border border-gray-300 dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+            className="w-full p-3 rounded-lg border border-gray-300 dark:bg-gray-800 dark:border-gray-700 dark:text-white"
           />
           <textarea
             name="message"
             placeholder="Your message"
             required
-            className="w-full p-3 rounded-md border border-gray-300 dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+            className="w-full p-3 rounded-lg border border-gray-300 dark:bg-gray-800 dark:border-gray-700 dark:text-white"
             rows={5}
           />
           <button
             type="submit"
-            className="px-4 py-2 bg-sky-500 hover:bg-sky-600 text-white font-semibold rounded-md transition"
+            className="px-4 py-2 rounded-lg bg-sky-500 hover:bg-sky-600 text-white font-semibold transition"
           >
             Send
           </button>
