@@ -7,3 +7,35 @@
 html {
   scroll-behavior: smooth;
 }
+
+:root {
+  --text-light: #374151;
+  --colour-primary: #0ea5e9; /* sky 500 */
+  --text-dark: #374151; /* fallback (used if dark mode not triggered) */
+}
+
+.dark {
+  --text-dark: #d1d5db;
+  --colour-primary-dark: #38bdf8; /* sky 400 */
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+@layer base {
+  body,
+  p,
+  li {
+    @apply text-[var(--text-light)] dark:text-[var(--text-dark)];
+  }
+
+  a,
+  button {
+    @apply text-[var(--text-light)] dark:text-[var(--text-dark)] hover:text-[var(--colour-primary)] dark:hover:text-[var(--colour-primary-dark)] transition;
+  }
+
+  h2 {
+    @apply text-3xl font-bold text-[var(--colour-primary)] dark:text-[var(--colour-primary-dark)] text-center;
+  }
+}

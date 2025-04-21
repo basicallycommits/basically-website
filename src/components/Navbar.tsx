@@ -23,41 +23,18 @@ const Navbar = () => {
         {/* Logo */}
         <a
           href="#"
-          className="text-xl font-bold text-sky-500 dark:text-sky-400"
+          className="text-xl font-bold text-[var(--colour-primary)] dark:text-[var(--colour-primary-dark)]"
         >
           Vincent Walker
         </a>
 
         {/* Desktop Links */}
         <div className="hidden md:flex space-x-6 items-center">
-          <a
-            href="#about"
-            className="text-gray-600 dark:text-gray-300 hover:text-sky-500 dark:hover:text-sky-400 transition"
-          >
-            About
-          </a>
-          <a
-            href="#projects"
-            className="text-gray-600 dark:text-gray-300 hover:text-sky-500 dark:hover:text-sky-400 transition"
-          >
-            Projects
-          </a>
-          <a
-            href="#find-me"
-            className="text-gray-600 dark:text-gray-300 hover:text-sky-500 dark:hover:text-sky-400 transition"
-          >
-            Find Me
-          </a>
-          <a
-            href="#contact"
-            className="text-gray-600 dark:text-gray-300 hover:text-sky-500 dark:hover:text-sky-400 transition"
-          >
-            Contact
-          </a>
-          <button
-            onClick={toggleTheme}
-            className="ml-4 text-gray-600 dark:text-gray-300 hover:text-sky-500 dark:hover:text-sky-400 transition"
-          >
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#find-me">Find Me</a>
+          <a href="#contact">Contact</a>
+          <button onClick={toggleTheme} className="ml-4">
             {isDark ? (
               <Sun className="w-5 h-5" />
             ) : (
@@ -67,10 +44,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <button
-          onClick={toggleMenu}
-          className="md:hidden text-gray-600 dark:text-gray-300 focus:outline-none"
-        >
+        <button onClick={toggleMenu} className="md:hidden focus:outline-none">
           {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
@@ -78,33 +52,21 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden px-4 pb-4 space-y-2">
-          <a
-            href="#about"
-            className="block py-2 text-gray-600 dark:text-gray-300 hover:text-sky-500 dark:hover:text-sky-400 transition"
-          >
+          <a href="#about" className="block py-2 ">
             About
           </a>
-          <a
-            href="#projects"
-            className="block py-2 text-gray-600 dark:text-gray-300 hover:text-sky-500 dark:hover:text-sky-400 transition"
-          >
+          <a href="#projects" className="block py-2 ">
             Projects
           </a>
-          <a
-            href="#find-me"
-            className="block py-2 text-gray-600 dark:text-gray-300 hover:text-sky-500 dark:hover:text-sky-400 transition"
-          >
+          <a href="#find-me" className="block py-2 ">
             Find Me
           </a>
-          <a
-            href="#contact"
-            className="block py-2 text-gray-600 dark:text-gray-300 hover:text-sky-500 dark:hover:text-sky-400 transition"
-          >
+          <a href="#contact" className="block py-2 ">
             Contact
           </a>
           <button
             onClick={toggleTheme}
-            className="mt-2 flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-sky-500 dark:hover:text-sky-400 transition"
+            className="mt-2 flex items-center gap-2 "
           >
             {isDark ? (
               <Sun className="w-5 h-5" />

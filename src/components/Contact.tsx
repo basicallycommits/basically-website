@@ -5,7 +5,7 @@ const Contact = () => {
       className="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900"
     >
       <div className="max-w-xl mx-auto text-center">
-        <h2 className="text-3xl font-bold text-sky-500">Contact</h2>
+        <h2>Contact</h2>
         <p className="mt-4 text-gray-600 dark:text-gray-300">
           Want to get in touch? Send me a message below and I'll get back to
           you.

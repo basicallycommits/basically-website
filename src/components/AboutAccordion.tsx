@@ -17,14 +17,14 @@ const AboutAccordion = () => {
             For example:
           </p>
           <div className="mt-4 mb-4">
-            <ul className="list-disc pl-5 space-y-1 text-gray-700 dark:text-gray-300 text-sm marker:text-xs marker:text-sky-500">
+            <ul className="list-disc pl-5 space-y-1 text-sm marker:text-xs marker:text-[var(--colour-primary)] dark:marker:text-[var(--colour-primary-dark)]">
               <li>Maths</li>
               <li>Data science</li>
               <li>Hardware</li>
               <li>Software</li>
               <li>
                 Languages
-                <ul className="list-disc pl-5 mt-1 space-y-1 marker:text-sky-400 text-xs">
+                <ul className="list-disc pl-5 mt-1 space-y-1 marker:text-[var(--colour-primary)] dark:marker:text-[var(--colour-primary-dark)] text-xs">
                   <li>日本語</li>
                   <li>한국어</li>
                   <li>中文</li>

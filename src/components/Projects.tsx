@@ -98,9 +98,7 @@ const Projects = () => {
   return (
     <section id="projects">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-        <h2 className="text-3xl font-bold text-sky-500 text-center">
-          Projects
-        </h2>
+        <h2>Projects</h2>
 
         <div className="space-y-12">
           {projectList.map((project, index) => {
