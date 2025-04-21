@@ -1,4 +1,4 @@
-import { AboutAccordion } from "./about-accordion";
+import { AboutAccordion } from "./AboutAccordion";
 
 const About = () => {
   return (
