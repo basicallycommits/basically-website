@@ -21,13 +21,13 @@ const Contact = () => {
             name="email"
             placeholder="Your email"
             required
-            className="w-full p-3 rounded-md border dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+            className="w-full p-3 rounded-md border border-gray-300 dark:bg-gray-800 dark:border-gray-700 dark:text-white"
           />
           <textarea
             name="message"
             placeholder="Your message"
             required
-            className="w-full p-3 rounded-md border dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+            className="w-full p-3 rounded-md border border-gray-300 dark:bg-gray-800 dark:border-gray-700 dark:text-white"
             rows={5}
           />
           <button
