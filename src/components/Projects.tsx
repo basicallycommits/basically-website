@@ -2,6 +2,7 @@ import vscodeImg from "@/assets/vscode_ss.png";
 import wdccImg from "@/assets/wdcc_ss.png";
 import freecyclingImg from "@/assets/freecycling_ss.png";
 import escapeRoomImg from "@/assets/escape_room.png";
+import motorImg from "@/assets/299-motor.png";
 
 const Projects = () => {
   const projectList = [
@@ -41,8 +42,7 @@ const Projects = () => {
       title: "Brushless DC Motor",
       description:
         "Soldered, 3d-printed, laser-cut and assembled parts for a brushless DC motor.",
-      imageUrl:
-        "https://images.unsplash.com/photo-1723730741656-6333f4840ecf?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      imageUrl: motorImg,
       date: "Mar 2025 – Present",
       status: "in-progress",
       skillsUsed: [
