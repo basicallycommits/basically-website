@@ -12,7 +12,6 @@ html {
   --text-light: #374151;
   --colour-primary: #0ea5e9; /* sky 500 */
   --colour-accent: #ffffff; /* white - currently unused */
-  --text-dark: #374151; /* fallback (used if dark mode not triggered) */
 }
 
 .dark {
