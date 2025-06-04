@@ -1,9 +1,9 @@
-import vscodeImg from "@/assets/vscode_ss.png";
-import wdccImg from "@/assets/wdcc_ss.png";
-import freecyclingImg from "@/assets/freecycling_ss.png";
-import escapeRoomImg from "@/assets/escape_room.png";
-import motorImg from "@/assets/299-motor.png";
-import freakyBirdImg from "@/assets/freaky-bird.png";
+import vscodeImg from "@/assets/images/vscode_ss.png";
+import wdccImg from "@/assets/images/wdcc_ss.png";
+import freecyclingImg from "@/assets/images/freecycling_ss.png";
+import escapeRoomImg from "@/assets/images/escape_room.png";
+import motorImg from "@/assets/images/299-motor.png";
+import freakyBirdImg from "@/assets/images/freaky-bird.png";
 import { Project } from "../lib/types";
 
 export const projectList: Project[] = [
