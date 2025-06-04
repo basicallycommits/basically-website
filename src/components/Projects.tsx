@@ -3,6 +3,7 @@ import wdccImg from "@/assets/wdcc_ss.png";
 import freecyclingImg from "@/assets/freecycling_ss.png";
 import escapeRoomImg from "@/assets/escape_room.png";
 import motorImg from "@/assets/299-motor.png";
+import freakyBirdImg from "@/assets/freaky-bird.png";
 
 const Projects = () => {
   const projectList = [
@@ -18,15 +19,13 @@ const Projects = () => {
       placeholderImage: true,
     },
     {
-      title: "VHDL Flappy Bird",
+      title: "Freaky Bird",
       description:
-        "Classic Flappy Bird-inspired game implemented in VHDL on an FPGA. Displayed on a VGA screen. Built with Quartus and QuestaSim.",
-      imageUrl:
-        "https://images.unsplash.com/photo-1597862624292-45748390b00e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "Flappy Bird-inspired game... with a twist! Implemented in VHDL on an FPGA board (DE0-CV). Displayed on a VGA screen and controlled with a PS/2 mouse. Built with Quartus.",
+      imageUrl: freakyBirdImg,
       date: "Apr 2025 – Present",
       status: "in-progress",
-      skillsUsed: ["VHDL", "FPGA", "Quartus", "QuestaSim"],
-      placeholderImage: true,
+      skillsUsed: ["VHDL", "FPGA", "Quartus Prime 19.1", "GitHub"],
     },
     {
       title: "Portfolio Website",
@@ -52,7 +51,6 @@ const Projects = () => {
         "Assembling",
         "Troubleshooting",
       ],
-      placeholderImage: true,
     },
     {
       title: "AUSA Wellbeing Tracker",
