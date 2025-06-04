@@ -98,7 +98,7 @@ const Projects = () => {
   return (
     <section id="projects">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-        <h2>Projects</h2>
+        <h2 className="heading h2">Projects</h2>
 
         <div className="space-y-12">
           {projectList.map((project, index) => {
@@ -117,7 +117,7 @@ const Projects = () => {
                 {...wrapperProps}
                 className="block transform transition hover:scale-[1.02] hover:shadow-xl hover:bg-gray-50 dark:hover:bg-gray-800 rounded-2xl"
               >
-                <div className="relative flex flex-col md:flex-row items-center bg-[var(--colour-accent)] dark:bg-[var(--colour-accent-dark)] rounded-2xl shadow-md overflow-hidden">
+                <div className="relative flex flex-col md:flex-row items-center project-card overflow-hidden">
                   {/* Image */}
                   <div className="flex justify-center items-center p-4 w-full md:w-1/3">
                     <img
@@ -131,7 +131,7 @@ const Projects = () => {
                   <div className="p-6 md:w-2/3 w-full flex flex-col gap-2">
                     {/* Title + Status Row */}
                     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1">
-                      <h3 className="text-2xl font-semibold text-gray-800 dark:text-white sm:truncate sm:whitespace-normal sm:flex-1">
+                      <h3 className="text-left h3 font-semibold text-gray-800 dark:text-white sm:truncate sm:whitespace-normal sm:flex-1">
                         {project.title}
                       </h3>
                       <div className="flex flex-wrap gap-2 mt-1 sm:mt-0 sm:shrink-0 sm:justify-end sm:max-w-[50%]">

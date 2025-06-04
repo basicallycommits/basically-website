@@ -48,7 +48,7 @@ const socials = [
 const FindMe = () => {
   return (
     <section id="find-me" className="py-12">
-      <h2 className="mb-8">Find Me</h2>
+      <h2 className="heading h2 mb-8">Find Me</h2>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
         {socials.map((site, i) => (
           // Check if the link is internal (fragment identifier) or external
@@ -64,9 +64,9 @@ const FindMe = () => {
               {site.icon}
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
+              <h4 className="text-left font-semibold text-gray-800 dark:text-white">
                 {site.title}
-              </h3>
+              </h4>
               {site.description && (
                 <p className="text-sm text-gray-600 dark:text-gray-300">
                   {site.description}

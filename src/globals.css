@@ -9,15 +9,15 @@ html {
 }
 
 :root {
-  --text-light: #374151;
-  --colour-primary: #0ea5e9; /* sky 500 */
-  --colour-accent: #ffffff; /* white - currently unused */
+  --text-light: theme("colors.gray.700");
+  --colour-primary: theme("colors.sky.500");
+  --colour-accent: theme("colors.white");
 }
 
 .dark {
-  --text-dark: #d1d5db;
-  --colour-primary-dark: #38bdf8; /* sky 400 */
-  --colour-accent-dark: #111827; /* gray 900 */
+  --text-dark: theme("colors.gray.300");
+  --colour-primary-dark: theme("colors.sky.400");
+  --colour-accent-dark: theme("colors.gray.900");
 }
 
 body {
@@ -35,8 +35,34 @@ body {
   button {
     @apply text-[var(--text-light)] dark:text-[var(--text-dark)] hover:text-[var(--colour-primary)] dark:hover:text-[var(--colour-primary-dark)] transition;
   }
+}
 
-  h2 {
-    @apply text-3xl font-bold text-[var(--colour-primary)] dark:text-[var(--colour-primary-dark)] text-center;
+@layer components {
+  .heading {
+    @apply text-[var(--colour-primary)] dark:text-[var(--colour-primary-dark)] font-bold text-center;
+  }
+
+  .h1 {
+    @apply text-4xl;
+  }
+
+  .h2 {
+    @apply text-3xl;
+  }
+
+  .h3 {
+    @apply text-2xl;
+  }
+
+  .h4 {
+    @apply text-lg;
+  }
+
+  .project-card {
+    @apply rounded-2xl text-[var(--text-light)] dark:text-[var(--text-dark)] bg-[var(--colour-accent)] dark:bg-[var(--colour-accent-dark)] shadow-md;
+  }
+
+  .text-field {
+    @apply p-3 rounded-lg border border-gray-300 dark:bg-gray-800 dark:border-gray-700 dark:text-white;
   }
 }

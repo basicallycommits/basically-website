@@ -5,7 +5,7 @@ const Contact = () => {
       className="py-16 px-4 sm:px-6 lg:px-8 bg-[var(--colour-accent)] dark:bg-[var(--colour-accent-dark)]"
     >
       <div className="max-w-xl mx-auto text-center">
-        <h2>Contact</h2>
+        <h2 className="heading h2">Contact</h2>
         <p className="mt-4 text-gray-600 dark:text-gray-300">
           Want to get in touch? Send me a message below and I'll get back to
           you.
@@ -21,13 +21,13 @@ const Contact = () => {
             name="email"
             placeholder="Your email"
             required
-            className="w-full p-3 rounded-lg border border-gray-300 dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+            className="w-full text-field"
           />
           <textarea
             name="message"
             placeholder="Your message"
             required
-            className="w-full p-3 rounded-lg border border-gray-300 dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+            className="w-full text-field"
             rows={5}
           />
           <button
