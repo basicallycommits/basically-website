@@ -1,10 +1,10 @@
-import { Navbar } from "@/components/navbar";
-import { Hero } from "@/components/hero";
-import { About } from "@/components/about";
-import { Projects } from "@/components/projects";
-import { FindMe } from "@/components/find-me";
-import { Contact } from "@/components/contact";
-import { GlobalBackground } from "./components/global-background";
+import { Navbar } from "@/components/Navbar";
+import { Hero } from "@/components/Hero";
+import { About } from "@/components/About";
+import { Projects } from "@/components/Projects";
+import { FindMe } from "@/components/FindMe";
+import { Contact } from "@/components/Contact";
+import { GlobalBackground } from "./components/GlobalBackground";
 
 function App() {
   return (

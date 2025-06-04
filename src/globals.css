@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --text-light: theme("colors.gray.700");
+  --colour-primary: theme("colors.sky.500");
+  --colour-accent: theme("colors.white");
+}
+
+.dark {
+  --text-dark: theme("colors.gray.300");
+  --colour-primary-dark: theme("colors.sky.400");
+  --colour-accent-dark: theme("colors.gray.900");
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+@layer base {
+  body,
+  p,
+  li {
+    @apply text-[var(--text-light)] dark:text-[var(--text-dark)];
+  }
+
+  a,
+  button {
+    @apply text-[var(--text-light)] dark:text-[var(--text-dark)] hover:text-[var(--colour-primary)] dark:hover:text-[var(--colour-primary-dark)] transition;
+  }
+}
+
+@layer components {
+  .heading {
+    @apply text-[var(--colour-primary)] dark:text-[var(--colour-primary-dark)] font-bold text-center;
+  }
+
+  .h1 {
+    @apply text-4xl;
+  }
+
+  .h2 {
+    @apply text-3xl;
+  }
+
+  .h3 {
+    @apply text-2xl;
+  }
+
+  .h4 {
+    @apply text-lg;
+  }
+
+  .project-card {
+    @apply rounded-2xl text-[var(--text-light)] dark:text-[var(--text-dark)] bg-[var(--colour-accent)] dark:bg-[var(--colour-accent-dark)] shadow-md;
+  }
+
+  .text-field {
+    @apply p-3 rounded-lg border border-gray-300 dark:bg-gray-800 dark:border-gray-700 dark:text-white;
+  }
+}
+
+@theme {
+  --font-Cormorant: "Cormorant", serif;
+}
+
+@font-face {
+  font-family: "Cormorant";
+  font-weight: 400;
+  src: url("assets/fonts/Cormorant/cormorant-regular.ttf") format("truetype");
+}

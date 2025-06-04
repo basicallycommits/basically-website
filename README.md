@@ -37,6 +37,4 @@ This is my personal website — a portfolio built with modern web tech to showca
 ## Image Attributions
 
 - <a href="https://www.flaticon.com/free-icons/electricity" title="electricity icons">Electricity icons created by fjstudio - Flaticon</a>
-- Placeholder FPGA image from [Unsplash](https://unsplash.com/photos/blue-and-black-circuit-board-qChPy3L7Nz4)
 - Placeholder PCB image from [Unsplash](https://unsplash.com/photos/a-close-up-of-a-computer-mother-board-iWLZV7cXHRE)
-- Placeholder Motor image from [Unsplash](https://unsplash.com/photos/a-camera-sitting-on-top-of-a-wooden-table-BxM0OH5TXgo)

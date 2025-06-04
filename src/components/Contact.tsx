@@ -2,10 +2,10 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900"
+      className="py-16 px-4 sm:px-6 lg:px-8 bg-[var(--colour-accent)] dark:bg-[var(--colour-accent-dark)]"
     >
       <div className="max-w-xl mx-auto text-center">
-        <h2 className="text-3xl font-bold text-sky-500">Contact</h2>
+        <h2 className="heading h2">Contact</h2>
         <p className="mt-4 text-gray-600 dark:text-gray-300">
           Want to get in touch? Send me a message below and I'll get back to
           you.
@@ -21,18 +21,18 @@ const Contact = () => {
             name="email"
             placeholder="Your email"
             required
-            className="w-full p-3 rounded-md border dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+            className="w-full text-field"
           />
           <textarea
             name="message"
             placeholder="Your message"
             required
-            className="w-full p-3 rounded-md border dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+            className="w-full text-field"
             rows={5}
           />
           <button
             type="submit"
-            className="px-4 py-2 bg-sky-500 hover:bg-sky-600 text-white font-semibold rounded-md transition"
+            className="px-4 py-2 rounded-lg bg-sky-500 hover:bg-sky-600 text-white font-semibold transition"
           >
             Send
           </button>

@@ -48,9 +48,7 @@ const socials = [
 const FindMe = () => {
   return (
     <section id="find-me" className="py-12">
-      <h2 className="text-3xl font-bold text-center text-sky-500 dark:text-white mb-8">
-        Find Me
-      </h2>
+      <h2 className="heading h2 mb-8">Find Me</h2>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
         {socials.map((site, i) => (
           // Check if the link is internal (fragment identifier) or external
@@ -60,15 +58,15 @@ const FindMe = () => {
             target={
               site.url && site.url.startsWith("http") ? "_blank" : undefined
             } // Only set target="_blank" for external links
-            className="flex items-center p-6 bg-white dark:bg-gray-900 rounded-2xl shadow-md hover:shadow-lg transition hover:scale-[1.02]"
+            className="flex items-center p-6 bg-[var(--colour-accent)] dark:bg-[var(--colour-accent-dark)] rounded-2xl shadow-md hover:shadow-lg transition hover:scale-[1.02]"
           >
             <div className="mr-4 text-sky-500 dark:text-sky-400">
               {site.icon}
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
+              <h4 className="text-left font-semibold text-gray-800 dark:text-white">
                 {site.title}
-              </h3>
+              </h4>
               {site.description && (
                 <p className="text-sm text-gray-600 dark:text-gray-300">
                   {site.description}
